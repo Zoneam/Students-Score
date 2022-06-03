@@ -5,7 +5,7 @@ import Student from './Student.jsx'
 import '@coreui/coreui/dist/css/coreui.min.css'
 import '@coreui/coreui/dist/css/coreui.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { CCard, CCardHeader, CCardBody } from '@coreui/react';
+import { CContainer } from '@coreui/react';
 function App() {
 
   const [students, setStudents] = useState(
@@ -13,9 +13,11 @@ function App() {
   )
 
   return (
-    <div className="App">
+  
+      <CContainer  className="App"style={{ display: "flex", flexdirection:"row",margin:"0 auto", justifyContent: "center"}} >
       <Student students={students}/>
-    </div>
+      </CContainer>
+
   );
 }
 
